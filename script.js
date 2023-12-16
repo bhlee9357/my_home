@@ -12,17 +12,17 @@ const partColors = {
 };
 
 const partNames = {
-    0: "°ø¼®",
-    1: "¼ÒÇÁ¶ó³ë",
-    2: "¾ËÅä",
-    3: "Å×³Ê",
-    4: "º£ÀÌ½º"
+    0: "ê³µì„",
+    1: "ì†Œí”„ë¼ë…¸",
+    2: "ì•Œí† ",
+    3: "í…Œë„ˆ",
+    4: "ë² ì´ìŠ¤"
 };
 
 const members = [
-    { name: "´ë¿ø1", part: 1 },
-    { name: "´ë¿ø2", part: 2 },
-    // ... Ãß°¡ ´ë¿ø
+    { name: "ëŒ€ì›1", part: 1 },
+    { name: "ëŒ€ì›2", part: 2 },
+    // ... ì¶”ê°€ ëŒ€ì›
 ];
 
 let selectedSeat = null;
@@ -40,7 +40,7 @@ function createSeatButton(row, col) {
     const seatButton = document.createElement('button');
     seatButton.classList.add('seat');
     seatButton.setAttribute('data-position', `${row}-${col}`);
-    seatButton.textContent = '°ø¼®';
+    seatButton.textContent = 'ê³µì„';
     seatButton.style.backgroundColor = partColors[0];
     seatButton.addEventListener('click', onSeatClick);
     return seatButton;
@@ -55,7 +55,7 @@ function onSeatClick() {
 function updateAvailableMembers() {
     const occupiedNames = getOccupiedNames();
     const memberSelect = document.getElementById('memberSelect');
-    memberSelect.innerHTML = '<option value="0">°ø¼®</option>';
+    memberSelect.innerHTML = '<option value="0">ê³µì„</option>';
     members.forEach(member => {
         if (!occupiedNames.has(member.name)) {
             memberSelect.appendChild(createMemberOption(member));
@@ -72,7 +72,7 @@ function createMemberOption(member) {
 
 function getOccupiedNames() {
     return new Set(Array.from(document.querySelectorAll('.seat'))
-        .filter(seat => seat.textContent !== '°ø¼®')
+        .filter(seat => seat.textContent !== 'ê³µì„')
         .map(seat => seat.textContent));
 }
 
@@ -91,7 +91,7 @@ function confirmSeatSelection() {
     const selectedMemberName = document.getElementById('memberSelect').value;
     const selectedMember = members.find(member => member.name === selectedMemberName);
     const part = selectedMember ? selectedMember.part : 0;
-    selectedSeat.textContent = selectedMemberName !== "0" ? selectedMemberName : '°ø¼®';
+    selectedSeat.textContent = selectedMemberName !== "0" ? selectedMemberName : 'ê³µì„';
     selectedSeat.style.backgroundColor = partColors[part];
     document.getElementById('seatSelectionModal').style.display = 'none';
 }
@@ -105,7 +105,7 @@ function saveSeatLayout() {
         };
     });
 
-    const filename = prompt("ÀúÀåÇÒ ÆÄÀÏ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:", "layout.json");
+    const filename = prompt("ì €ì¥í•  íŒŒì¼ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:", "layout.json");
     if (filename) {
         const blob = new Blob([JSON.stringify(layoutData, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
@@ -133,7 +133,7 @@ function loadSeatLayout(event) {
 
 function resetSeatLayout() {
     document.querySelectorAll('.seat').forEach(seat => {
-        seat.textContent = '°ø¼®';
+        seat.textContent = 'ê³µì„';
         seat.style.backgroundColor = partColors[0];
     });
 }
