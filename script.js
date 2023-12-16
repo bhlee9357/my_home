@@ -20,8 +20,8 @@ const partNames = {
 };
 
 const members = [
-    { name: "김종분", part: 1 },
     { name: "권미라", part: 1 },
+    { name: "김종분", part: 1 },
     { name: "이미향", part: 1 },
     { name: "이용선", part: 1 },
     { name: "이윤경", part: 1 },
