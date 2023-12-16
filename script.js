@@ -20,8 +20,31 @@ const partNames = {
 };
 
 const members = [
-    { name: "대원1", part: 1 },
-    { name: "대원2", part: 2 },
+    { name: "김종분", part: 1 },
+    { name: "이미향", part: 1 },
+    { name: "이용선", part: 1 },
+    { name: "이윤경", part: 1 },
+    { name: "이예나", part: 1 },
+    { name: "이문경", part: 1 },
+    { name: "김미선", part: 2 },
+    { name: "김은혜", part: 2 },
+    { name: "이은숙", part: 2 },
+    { name: "이혜정", part: 2 },
+    { name: "장나리", part: 2 },
+    { name: "정영자", part: 2 },
+    { name: "이영미", part: 2 },
+    { name: "박기숙", part: 2 },
+    { name: "진혜진", part: 2 },
+    { name: "김환복", part: 3 },
+    { name: "박승모", part: 3 },
+    { name: "장효상", part: 3 },
+    { name: "박영수", part: 4 },
+    { name: "박원구", part: 4 },
+    { name: "안재홍", part: 4 },
+    { name: "이병호", part: 4 },
+    { name: "조성민", part: 4 },
+    { name: "김정석", part: 4 },
+    { name: "박기동", part: 4 },
     // ... 추가 대원
 ];
 
