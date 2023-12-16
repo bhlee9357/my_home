@@ -41,6 +41,7 @@ const members = [
     { name: "박영수", part: 4 },
     { name: "박원구", part: 4 },
     { name: "안재홍", part: 4 },
+    { name: "김필석", part: 4 },
     { name: "이병호", part: 4 },
     { name: "조성민", part: 4 },
     { name: "김정석", part: 4 },
