@@ -1,29 +1,36 @@
-﻿#seat-map {
+﻿/* 대원 명단 스타일 */
+#member-list {
+    margin-bottom: 20px;
+}
+
+.member {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+    cursor: pointer; /* 드래그 가능한 항목 표시 */
+}
+
+/* 좌석 배치도 스타일 */
+#seat-map {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(10, 1fr); /* 10개의 열 */
+    grid-auto-rows: minmax(50px, auto); /* 행 높이 */
+    grid-gap: 5px; /* 격자 간격 */
 }
 
 .seat {
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    border: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: #ddd;
     cursor: pointer;
 }
 
-#seatSelectionModal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    display: none;
-}
-
-#seatSelectionModal select, #seatSelectionModal button {
-    margin: 10px 0;
+/* 파트별 제목 스타일 */
+h3 {
+    margin-top: 20px;
+    color: navy;
 }

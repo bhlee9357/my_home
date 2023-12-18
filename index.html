@@ -1,30 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>좌석 배치도</title>
+    <title>찬양대 좌석 배치도</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div id="member-list">
+        <!-- 대원 명단이 여기에 표시됩니다 -->
+    </div>
+
     <div id="seat-map">
         <!-- 좌석 배치도가 여기에 표시됩니다 -->
     </div>
-
-    <!-- 좌석 선택을 위한 모달 -->
-    <div id="seatSelectionModal" style="display: none;">
-        <select id="memberSelect">
-            <option value="0">공석</option>
-            <!-- 대원 목록이 여기에 들어갑니다 -->
-        </select>
-        <button id="confirmSelection">확인</button>
-        <button id="cancelSelection">취소</button>
-    </div>
-
-    <!-- 관리 버튼들 -->
-    <button id="saveLayout">배치 저장하기</button>
-    <input type="file" id="loadInput" style="display: none;">
-    <button id="loadLayout">배치 불러오기</button>
-    <button id="resetLayout">전체 리셋</button>
 
     <script src="script.js"></script>
 </body>
